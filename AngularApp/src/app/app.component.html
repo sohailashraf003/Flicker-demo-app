@@ -1,0 +1,20 @@
+<app-header></app-header>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="gallery col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <h1 class="gallery-title">Flicker Feeds</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="search col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-right: 0;">
+          <input [(ngModel)]="searchText" name="searchText" class="secrch-box" type="text" placeholder="Enter the tags with comma sepearted" aria-label="Search">
+          <button type="button" class="btn btn-primary" (click)="timer.fetchFeeds(searchText)">Search</button>
+      </div>
+    </div>
+    <div class="row">
+        <app-feed #timer></app-feed>
+    </div>
+    
+  </div>
+</section>

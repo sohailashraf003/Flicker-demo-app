@@ -1,0 +1,8 @@
+<div *ngIf="feeds">
+    <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe"  *ngFor="let feed of feeds.items">
+        <img  [title]="feed.tags" src='{{feed.media.m}}' [alt]="feed.media.tags"  class="img-responsive">
+        <!-- [title]="{{feed.media.tags}}" [alt]="{{feed.media.tags}}" -->
+    </div>
+</div>
+
+
